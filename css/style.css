@@ -1,0 +1,103 @@
+
+body {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+/********************* BARRA DE NAVEGACIÓN **************************/
+nav.navbar {
+    background-color: #000 !important;
+}
+
+.navbar-brand {
+    color: #e63946 !important;
+}
+
+/***************************** HERO *******************************/
+.hero {
+    background: url('../images/hero2.jpg') center -120px / cover no-repeat;
+    height: 90vh;
+    display: flex;
+    align-items: flex-end;   /* texto abajo */
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding-bottom: 120px;   /* distancia entre el texto y el auto */
+}
+
+/* Oscurecer un poco la imagen*/
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.hero-title {
+    position: relative;
+    z-index: 2;
+    font-weight: 700;
+    max-width: 650px;
+    line-height: 1.1;
+    text-shadow: 3px 3px 10px #000;
+}
+
+.hero-title .big {
+    font-size: 4.6rem;
+    font-weight: 800;
+    color: #e63946;
+}
+
+.hero-title {
+    font-size: 2.3rem;
+}
+
+.subline {
+    border-bottom: 3px solid white;
+    display: inline-block;
+    padding-bottom: 6px;
+}
+
+/***************************** CARDS *******************************/
+
+/*EFECTO HOVER EN CARDS*/
+.card {
+    transition: transform 0.35s ease, box-shadow 0.4s ease;
+    border: none;
+}
+
+.card:hover {
+    transform: scale(1.06) translateY(-6px);
+    box-shadow: 0 0 25px rgba(230, 57, 70, 0.7);
+}
+
+/* Evitar que la imagen se distorsione */
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Card grande */
+.big-card .card-img-top {
+    height: 280px;
+}
+
+/* Cards más pequeñas */
+.small-card .card-img-top {
+    height: 200px;
+}
+
+/*********CARRUSEL (GALERIA) ************************/
+.galeria-img {
+    height: 480px;
+    object-fit: cover;
+    filter: brightness(0.85);
+}
+
+.carousel-caption h5 {
+    text-shadow: 3px 3px 10px black;
+}
+
+.carousel-caption p {
+    text-shadow: 2px 2px 6px black;
+}
